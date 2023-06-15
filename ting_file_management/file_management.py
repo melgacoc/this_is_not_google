@@ -4,6 +4,7 @@ import sys
 def txt_importer(path_file):
     if not path_file.endswith(".txt"):
         sys.stderr.write("Formato inválido\n")
+        return None
     try:
         with open(path_file, "r") as file:
             content = file.read()
